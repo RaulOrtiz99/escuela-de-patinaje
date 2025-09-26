@@ -38,22 +38,22 @@ const App: React.FC = () => {
       caption: "Pequeños gigantes",
     },
     {
-      src: "/assets/imagelis18.jpg",
+      src: "/assets/carrousel17.jpg",
       alt: "Campeonatos",
       caption: "Estudiantes destacados",
     },
     {
-      src: "/assets/imagelis18.jpg",
+      src: "/assets/carrousel18.jpg",
       alt: "Campeonatos",
       caption: "Galardonados de la escuela",
     },
     {
-      src: "/assets/imagelis17.jpg",
+      src: "/assets/imagelis13.jpg",
       alt: "Practicas",
       caption: "Clases iniciales",
     },
     {
-      src: "/assets/imagelis19.jpg",
+      src: "/assets/carrousel19.jpg",
       alt: "Campeonato internacional",
       caption: "Representando a Bolivia",
     },
