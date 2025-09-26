@@ -106,7 +106,7 @@ const App: React.FC = () => {
             <div className="flex items-center space-x-3">
               <div className="w-10 h-12 bg-green-500 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/assets/patinlogo.jpg"
+                  src="/assets/logoheader.png"
                   alt="Logo Club Patín Elite"
                   className="w-8 h-8 object-contain"
                 />
