@@ -16,7 +16,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Facebook,
-  Instagram // Note: Using Instagram icon as a placeholder for TikTok
+  Instagram
 } from "lucide-react";
 
 interface CarouselImage {
@@ -30,30 +30,30 @@ const App: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [currentImage, setCurrentImage] = useState<number>(0);
 
-  // Imágenes para el carrusel
+  // Imágenes para el carrusel - usando rutas absolutas para mejor compatibilidad
   const carouselImages: CarouselImage[] = [
     {
-      src: "src/assets/imagelis13.jpg",
+      src: "public/assets/imagelis13.jpg",
       alt: "Estudiantes club elite",
       caption: "Pequeños gigantes"
     },
     {
-      src: "src/assets/imagelis18.jpg",
+      src: "public/assets/imagelis18.jpg",
       alt: "Campeonatos",
       caption: "Estudiantes destacados"
     },
     {
-      src: "src/assets/imagelis18.jpg",
+      src: "public/assets/imagelis18.jpg",
       alt: "Campeonatos",
       caption: "Galardonados de la escuela"
     },
     {
-      src: "src/assets/imagelis17.jpg",
+      src: "public/assets/imagelis17.jpg",
       alt: "Practicas",
       caption: "Clases iniciales"
     },
     {
-      src: "src/assets/imagelis19.jpg",
+      src: "public/assets/imagelis19.jpg",
       alt: "Campeonato internacional",
       caption: "Representando a Bolivia"
     }
@@ -106,7 +106,7 @@ const App: React.FC = () => {
                 <span className="text-white font-bold">CE</span>
               </div>
               <span className="text-xl font-bold text-gray-900">
-                Club Patin Elite
+                Club Patín Elite
               </span>
             </div>
 
@@ -244,7 +244,7 @@ const App: React.FC = () => {
               <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl p-8 shadow-2xl">
                 <div className="bg-white rounded-2xl p-8 h-96 flex items-center justify-center overflow-hidden">
                   <img
-                    src="src/assets/image1.jpg"
+                    src="public/assets/header.jpg"
                     alt="Patinadora profesional realizando una pirueta"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -581,7 +581,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Video Player */}
+          {/* Video Player - Video actualizado */}
           <div className="mt-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               Video Destacado
@@ -590,8 +590,8 @@ const App: React.FC = () => {
               <div className="relative w-full h-0 pb-[56.25%]">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/YsrHIEyD5I4"
-                  title="Club Elite Video"
+                  src="https://www.youtube.com/embed/McO0BXKohUU"
+                  title="Club Elite Video - Patinaje Artístico"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -667,7 +667,7 @@ const App: React.FC = () => {
               <div className="bg-white rounded-3xl p-8 shadow-2xl">
                 <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl p-8 h-96 flex items-center justify-center overflow-hidden">
                   <img
-                    src="src/assets/image5.jpg"
+                    src="public/assets/image5.jpg"
                     alt="Estudiantes entrenando en pista de patinaje"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -679,147 +679,144 @@ const App: React.FC = () => {
       </section>
 
       {/* Instructores Section */}
-<section id="instructores" className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-        Nuestro Equipo de Instructores
-      </h2>
-      <p className="text-lg text-gray-600">
-        Profesionales con experiencia internacional y pasión por enseñar
-      </p>
-    </div>
+      <section id="instructores" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Nuestro Equipo de Instructores
+            </h2>
+            <p className="text-lg text-gray-600">
+              Profesionales con experiencia internacional y pasión por enseñar
+            </p>
+          </div>
 
-    <div className="grid md:grid-cols-3 gap-8">
-      {/* Instructor 1 */}
-      <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
-        <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-          <img
-            src="src/assets/imagelist1.jpg"
-            alt="Macario Santelices Calle"
-            className="w-full h-full object-cover"
-          />
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Instructor 1 */}
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+                <img
+                  src="public/assets/imagelist1.jpg"
+                  alt="Macario Santelices Calle"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Macario Santelices Calle
+              </h3>
+              <p className="text-green-600 font-medium mb-4">
+                Director Académico - Preparador Técnico
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Campeón Nacional de patinaje, Campeón Panamericano de patinaje
+                de velocidad, miembro de la selección nacional de patinaje.
+              </p>
+            </div>
+
+            {/* Instructor 2 */}
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+                <img
+                  src="public/assets/imagelist7.jpg"
+                  alt="Miguel Angel Flores"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Miguel Angel Flores
+              </h3>
+              <p className="text-blue-600 font-medium mb-4">Entrenador</p>
+              <p className="text-gray-600 leading-relaxed">
+                Instructor especializado en técnicas de patinaje con amplia experiencia
+                en el entrenamiento de estudiantes de todos los niveles.
+              </p>
+            </div>
+
+            {/* Instructor 3 */}
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+                <img
+                  src="public/assets/imagelist5.jpg"
+                  alt="Belen Zambrana Pedraza"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Belén Zambrana Pedraza
+              </h3>
+              <p className="text-purple-600 font-medium mb-4">
+                Profesor Auxiliar
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                20 años, estudiante de Psicología en Utepsa. 4 años de experiencia
+                educativa y 11 años de experiencia en patinaje.
+              </p>
+            </div>
+
+            {/* Instructor 4 */}
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+                <img
+                  src="public/assets/imagelist6.jpg"
+                  alt="Dorca Avigail Choque Cruz"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Dorca Avigail Choque Cruz
+              </h3>
+              <p className="text-green-600 font-medium mb-4">
+                Profesora de nivel Avanzado
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                8 años de experiencia en patinaje. Especialidad en control
+                de rendimiento y preparación para competencias.
+              </p>
+            </div>
+
+            {/* Instructor 5 */}
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+                <img
+                  src="public/assets/imagelist4.jpg"
+                  alt="Oscar Alberto Grageda"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Oscar Alberto Grageda
+              </h3>
+              <p className="text-blue-600 font-medium mb-4">
+                Profesor de nivel Formación
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Atleta con participación internacional en atletismo. Campeón
+                sudamericano. Especialidad: Preparador físico.
+              </p>
+            </div>
+
+            {/* Instructor 6 */}
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
+                <img
+                  src="public/assets/imagelist3.jpg"
+                  alt="Fabián Andres Zegarra Almendras"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Fabián Andrés Zegarra Almendras
+              </h3>
+              <p className="text-purple-600 font-medium mb-4">
+                Profesor de nivel Inicial
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Especialista en guiar estudiantes en sus primeros pasos en el
+                patinaje, con enfoque en técnicas fundamentales.
+              </p>
+            </div>
+          </div>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Macario Santelices Calle
-        </h3>
-        <p className="text-green-600 font-medium mb-4">
-          Director Académico - Preparador Técnico
-        </p>
-        <p className="text-gray-600 leading-relaxed">
-          Campeón Nacional de patinaje, Campeón Panamericano de patinaje de velocidad, miembro de la selección nacional de patinaje.
-        </p>
-      </div>
-
-      {/* Instructor 2 */}
-      <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
-        <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80"
-            alt="Miguel Angel Flores"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Miguel Angel Flores
-        </h3>
-        <p className="text-blue-600 font-medium mb-4">
-          Entrenador
-        </p>
-        <p className="text-gray-600 leading-relaxed"></p>
-      </div>
-
-      {/* Instructor 3 */}
-      <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
-        <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80"
-            alt="Instructor 3"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Belen Zambrana Pedraza
-        </h3>
-        <p className="text-purple-600 font-medium mb-4">
-          Profesor Auxiliar
-        </p>
-        <p className="text-gray-600 leading-relaxed">
-          Nombre completo: Belén Zambrana Pedraza.  
-          Edad: 20 años.  
-          Fecha de nacimiento: 12/01/2005.  
-          Estudio: Utepsa - Psicología.  
-          Experiencia educativa: 4 años.  
-          Experiencia en patinaje: 11 años.
-        </p>
-      </div>
-
-      {/* Instructor 4 */}
-      <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
-        <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80"
-            alt="Dorca Avigail Choque Cruz"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Dorca Avigail Choque Cruz
-        </h3>
-        <p className="text-green-600 font-medium mb-4">
-          Profesora de nivel Avanzado
-        </p>
-        <p className="text-gray-600 leading-relaxed">
-          8 años de experiencia.  
-          Especialidad: control de rendimiento.
-        </p>
-      </div>
-
-      {/* Instructor 5 */}
-      <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
-        <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1603415526960-f7e0328a9117?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80"
-            alt="Oscar Alberto Grageda"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Oscar Alberto Grageda
-        </h3>
-        <p className="text-blue-600 font-medium mb-4">
-          Profesor de nivel Formación
-        </p>
-        <p className="text-gray-600 leading-relaxed">
-          Atleta con participación internacional en atletismo.  
-          Campeón sudamericano.  
-          Especialidad: Preparador físico.
-        </p>
-      </div>
-
-      {/* Instructor 6 */}
-      <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
-        <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80"
-            alt="Fabián Andres Zegarra Almendras"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Fabián Andres Zegarra Almendras
-        </h3>
-        <p className="text-purple-600 font-medium mb-4">
-          Profesor de nivel Inicial
-        </p>
-        <p className="text-gray-600 leading-relaxed">
-          Experiencia guiando a estudiantes en sus primeros pasos en el patinaje.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Contacto Section */}
       <section id="contacto" className="py-20 bg-gray-50">
@@ -846,8 +843,15 @@ const App: React.FC = () => {
                     <Phone className="text-green-500" size={24} />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Teléfono de Contacto 1</p>
-                    <a href="tel:+59167739022" className="text-gray-600 hover:text-green-500 transition-colors">+591 67739022</a>
+                    <p className="font-semibold text-gray-900">
+                      Teléfono de Contacto 1
+                    </p>
+                    <a
+                      href="tel:+59167739022"
+                      className="text-gray-600 hover:text-green-500 transition-colors"
+                    >
+                      +591 67739022
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -855,8 +859,15 @@ const App: React.FC = () => {
                     <Phone className="text-green-500" size={24} />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Teléfono de Contacto 2</p>
-                    <a href="tel:+59162156200" className="text-gray-600 hover:text-green-500 transition-colors">+591 62156200</a>
+                    <p className="font-semibold text-gray-900">
+                      Teléfono de Contacto 2
+                    </p>
+                    <a
+                      href="tel:+59162156200"
+                      className="text-gray-600 hover:text-green-500 transition-colors"
+                    >
+                      +591 62156200
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -865,12 +876,17 @@ const App: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Ubicación</p>
-                    <p className="text-gray-600">Estadio Ramon Tahuchi</p>
+                    <p className="text-gray-600">Estadio Ramon Tahuichi</p>
                   </div>
                 </div>
                 <div className="mt-8">
                   <button
-                    onClick={() => window.open("https://wa.me/59167739022?text=Requiero%20más%20información%20sobre%20Club%20Elite", "_blank")}
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/59167739022?text=Requiero%20más%20información%20sobre%20Club%20Elite",
+                        "_blank"
+                      )
+                    }
                     className="w-full bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all transform hover:scale-105"
                   >
                     <svg
@@ -898,12 +914,14 @@ const App: React.FC = () => {
             <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold">CE</span>
             </div>
-            <span className="text-2xl font-bold">Club Patin Elite</span>
+            <span className="text-2xl font-bold">Club Patín Elite</span>
           </div>
 
           {/* Social Media Section */}
           <div className="text-center mb-6">
-            <h3 className="text-xl font-bold mb-4">Síguenos en nuestras redes sociales</h3>
+            <h3 className="text-xl font-bold mb-4">
+              Síguenos en nuestras redes sociales
+            </h3>
             <div className="flex justify-center gap-4">
               <a
                 href="https://www.facebook.com/Club.de.Patinaje.Santa.Cruz.Elite/?locale=es_LA"
@@ -920,7 +938,7 @@ const App: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
               >
-                <Instagram size={24} /> {/* Using Instagram icon as TikTok placeholder */}
+                <Instagram size={24} />
                 <span>TikTok</span>
               </a>
             </div>
