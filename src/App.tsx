@@ -16,7 +16,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Facebook,
-  Instagram
+  Instagram,
 } from "lucide-react";
 
 interface CarouselImage {
@@ -35,28 +35,28 @@ const App: React.FC = () => {
     {
       src: "/assets/imagelis13.jpg",
       alt: "Estudiantes club elite",
-      caption: "Pequeños gigantes"
+      caption: "Pequeños gigantes",
     },
     {
       src: "/assets/imagelis18.jpg",
       alt: "Campeonatos",
-      caption: "Estudiantes destacados"
+      caption: "Estudiantes destacados",
     },
     {
       src: "/assets/imagelis18.jpg",
       alt: "Campeonatos",
-      caption: "Galardonados de la escuela"
+      caption: "Galardonados de la escuela",
     },
     {
       src: "/assets/imagelis17.jpg",
       alt: "Practicas",
-      caption: "Clases iniciales"
+      caption: "Clases iniciales",
     },
     {
       src: "/assets/imagelis19.jpg",
       alt: "Campeonato internacional",
-      caption: "Representando a Bolivia"
-    }
+      caption: "Representando a Bolivia",
+    },
   ];
 
   useEffect(() => {
@@ -88,7 +88,9 @@ const App: React.FC = () => {
   };
 
   const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+    setCurrentImage(
+      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+    );
   };
 
   return (
@@ -102,8 +104,12 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">CE</span>
+              <div className="w-10 h-12 bg-green-500 rounded-full flex items-center justify-center overflow-hidden">
+                <img
+                  src="/assets/patinlogo.jpg"
+                  alt="Logo Club Patín Elite"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-gray-900">
                 Club Patín Elite
@@ -288,14 +294,18 @@ const App: React.FC = () => {
 
               <div className="space-y-4 mb-8">
                 <div>
-                  <p className="font-semibold text-gray-900 mb-2">Horarios disponibles:</p>
+                  <p className="font-semibold text-gray-900 mb-2">
+                    Horarios disponibles:
+                  </p>
                   <div className="space-y-2 text-sm">
                     <div className="bg-gray-50 p-2 rounded">
-                      <strong>Lunes, Miércoles, Viernes</strong><br />
+                      <strong>Lunes, Miércoles, Viernes</strong>
+                      <br />
                       Tarde: 16:30-18:00 | Noche: 18:30-20:00
                     </div>
                     <div className="bg-gray-50 p-2 rounded">
-                      <strong>Martes, Jueves, Sábado</strong><br />
+                      <strong>Martes, Jueves, Sábado</strong>
+                      <br />
                       Tarde: 16:30-18:00 | Noche: 18:30-20:00
                     </div>
                   </div>
@@ -309,21 +319,19 @@ const App: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Check className="text-green-500" size={16} />
-                    <span className="text-gray-700">
-                      Juegos educativos
-                    </span>
+                    <span className="text-gray-700">Juegos educativos</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Check className="text-green-500" size={16} />
-                    <span className="text-gray-700">Desarrollo de confianza</span>
+                    <span className="text-gray-700">
+                      Desarrollo de confianza
+                    </span>
                   </div>
                 </div>
               </div>
 
               <div className="bg-pink-50 rounded-lg p-4">
-                <p className="text-lg font-bold text-pink-700">
-                  200 Bs/mes
-                </p>
+                <p className="text-lg font-bold text-pink-700">200 Bs/mes</p>
               </div>
             </div>
 
@@ -345,14 +353,18 @@ const App: React.FC = () => {
 
               <div className="space-y-4 mb-8">
                 <div>
-                  <p className="font-semibold text-gray-900 mb-2">Horarios disponibles:</p>
+                  <p className="font-semibold text-gray-900 mb-2">
+                    Horarios disponibles:
+                  </p>
                   <div className="space-y-2 text-sm">
                     <div className="bg-gray-50 p-2 rounded">
-                      <strong>Lunes, Miércoles, Viernes</strong><br />
+                      <strong>Lunes, Miércoles, Viernes</strong>
+                      <br />
                       Tarde: 16:30-18:00 | Noche: 18:30-20:00
                     </div>
                     <div className="bg-gray-50 p-2 rounded">
-                      <strong>Martes, Jueves, Sábado</strong><br />
+                      <strong>Martes, Jueves, Sábado</strong>
+                      <br />
                       Tarde: 16:30-18:00 | Noche: 18:30-20:00
                     </div>
                   </div>
@@ -360,7 +372,9 @@ const App: React.FC = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
                     <Check className="text-green-500" size={16} />
-                    <span className="text-gray-700">Saltos básicos y giros</span>
+                    <span className="text-gray-700">
+                      Saltos básicos y giros
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Check className="text-green-500" size={16} />
@@ -374,9 +388,7 @@ const App: React.FC = () => {
               </div>
 
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-lg font-bold text-blue-700">
-                  200 Bs/mes
-                </p>
+                <p className="text-lg font-bold text-blue-700">200 Bs/mes</p>
               </div>
             </div>
 
@@ -398,14 +410,18 @@ const App: React.FC = () => {
 
               <div className="space-y-4 mb-8">
                 <div>
-                  <p className="font-semibold text-gray-900 mb-2">Horarios disponibles:</p>
+                  <p className="font-semibold text-gray-900 mb-2">
+                    Horarios disponibles:
+                  </p>
                   <div className="space-y-2 text-sm">
                     <div className="bg-gray-50 p-2 rounded">
-                      <strong>Lunes, Miércoles, Viernes</strong><br />
+                      <strong>Lunes, Miércoles, Viernes</strong>
+                      <br />
                       Tarde: 16:30-18:00 | Noche: 18:30-20:00
                     </div>
                     <div className="bg-gray-50 p-2 rounded">
-                      <strong>Martes, Jueves, Sábado</strong><br />
+                      <strong>Martes, Jueves, Sábado</strong>
+                      <br />
                       Tarde: 16:30-18:00 | Noche: 18:30-20:00
                     </div>
                   </div>
@@ -427,9 +443,7 @@ const App: React.FC = () => {
               </div>
 
               <div className="bg-green-50 rounded-lg p-4">
-                <p className="text-lg font-bold text-green-700">
-                  200 Bs/mes
-                </p>
+                <p className="text-lg font-bold text-green-700">200 Bs/mes</p>
               </div>
             </div>
           </div>
@@ -460,19 +474,27 @@ const App: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="text-yellow-600" size={16} />
-                      <span className="text-gray-700">Horario: 19:00 a 21:00</span>
+                      <span className="text-gray-700">
+                        Horario: 19:00 a 21:00
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="text-yellow-600" size={16} />
-                      <span className="text-gray-700">Saltos dobles y triples</span>
+                      <span className="text-gray-700">
+                        Saltos dobles y triples
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="text-yellow-600" size={16} />
-                      <span className="text-gray-700">Rutinas competitivas</span>
+                      <span className="text-gray-700">
+                        Rutinas competitivas
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="text-yellow-600" size={16} />
-                      <span className="text-gray-700">Preparación psicológica</span>
+                      <span className="text-gray-700">
+                        Preparación psicológica
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -503,24 +525,25 @@ const App: React.FC = () => {
                 Lunes, Miércoles y Viernes
               </span>
               <span className="text-gray-500">|</span>
-              <span className="text-gray-600">
-                Primera semana de cada mes
-              </span>
+              <span className="text-gray-600">Primera semana de cada mes</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Momentos Section with Video */}
-      <section id="momentos" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section
+        id="momentos"
+        className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Nuestros Mejores Momentos
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Revive los momentos más especiales de nuestros estudiantes en competencias,
-              presentaciones y logros alcanzados en Club Elite.
+              Revive los momentos más especiales de nuestros estudiantes en
+              competencias, presentaciones y logros alcanzados en Club Elite.
             </p>
           </div>
 
@@ -533,7 +556,7 @@ const App: React.FC = () => {
                   alt={carouselImages[currentImage].alt}
                   className="w-full h-full object-cover transition-opacity duration-500"
                 />
-                
+
                 {/* Overlay con información */}
                 <div className="absolute inset-0 bg-black/20 flex items-end">
                   <div className="w-full p-8">
@@ -557,7 +580,7 @@ const App: React.FC = () => {
             >
               <ChevronLeft className="text-gray-700" size={24} />
             </button>
-            
+
             <button
               onClick={nextImage}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
@@ -572,9 +595,9 @@ const App: React.FC = () => {
                   key={index}
                   onClick={() => setCurrentImage(index)}
                   className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentImage 
-                      ? 'bg-green-500 w-8' 
-                      : 'bg-gray-300 hover:bg-gray-400'
+                    index === currentImage
+                      ? "bg-green-500 w-8"
+                      : "bg-gray-300 hover:bg-gray-400"
                   }`}
                 />
               ))}
@@ -726,8 +749,9 @@ const App: React.FC = () => {
               </h3>
               <p className="text-blue-600 font-medium mb-4">Entrenador</p>
               <p className="text-gray-600 leading-relaxed">
-                Instructor especializado en técnicas de patinaje con amplia experiencia
-                en el entrenamiento de estudiantes de todos los niveles.
+                Instructor especializado en técnicas de patinaje con amplia
+                experiencia en el entrenamiento de estudiantes de todos los
+                niveles.
               </p>
             </div>
 
@@ -747,8 +771,8 @@ const App: React.FC = () => {
                 Profesor Auxiliar
               </p>
               <p className="text-gray-600 leading-relaxed">
-                20 años, estudiante de Psicología en Utepsa. 4 años de experiencia
-                educativa y 11 años de experiencia en patinaje.
+                20 años, estudiante de Psicología en Utepsa. 4 años de
+                experiencia educativa y 11 años de experiencia en patinaje.
               </p>
             </div>
 
@@ -768,8 +792,8 @@ const App: React.FC = () => {
                 Profesora de nivel Avanzado
               </p>
               <p className="text-gray-600 leading-relaxed">
-                8 años de experiencia en patinaje. Especialidad en control
-                de rendimiento y preparación para competencias.
+                8 años de experiencia en patinaje. Especialidad en control de
+                rendimiento y preparación para competencias.
               </p>
             </div>
 
