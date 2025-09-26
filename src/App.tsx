@@ -44,8 +44,8 @@ const App: React.FC = () => {
     },
     {
       src: "src/assets/imagelis18.jpg",
-      alt: "Presentación artística",
-      caption: "Festival de Patinaje Artístico"
+      alt: "Campeonatos",
+      caption: "Galardonados de la escuela"
     },
     {
       src: "src/assets/imagelis17.jpg",
@@ -739,7 +739,7 @@ const App: React.FC = () => {
           />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Douglas Rodolfo Ramirez Wende
+          Belen Zambrana Pedraza
         </h3>
         <p className="text-purple-600 font-medium mb-4">
           Profesor Auxiliar
