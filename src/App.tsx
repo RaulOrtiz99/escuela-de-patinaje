@@ -33,27 +33,27 @@ const App: React.FC = () => {
   // Imágenes para el carrusel - usando rutas absolutas para mejor compatibilidad
   const carouselImages: CarouselImage[] = [
     {
-      src: "public/assets/imagelis13.jpg",
+      src: "/assets/imagelis13.jpg",
       alt: "Estudiantes club elite",
       caption: "Pequeños gigantes"
     },
     {
-      src: "public/assets/imagelis18.jpg",
+      src: "/assets/imagelis18.jpg",
       alt: "Campeonatos",
       caption: "Estudiantes destacados"
     },
     {
-      src: "public/assets/imagelis18.jpg",
+      src: "/assets/imagelis18.jpg",
       alt: "Campeonatos",
       caption: "Galardonados de la escuela"
     },
     {
-      src: "public/assets/imagelis17.jpg",
+      src: "/assets/imagelis17.jpg",
       alt: "Practicas",
       caption: "Clases iniciales"
     },
     {
-      src: "public/assets/imagelis19.jpg",
+      src: "/assets/imagelis19.jpg",
       alt: "Campeonato internacional",
       caption: "Representando a Bolivia"
     }
@@ -244,7 +244,7 @@ const App: React.FC = () => {
               <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl p-8 shadow-2xl">
                 <div className="bg-white rounded-2xl p-8 h-96 flex items-center justify-center overflow-hidden">
                   <img
-                    src="public/assets/header.jpg"
+                    src="/assets/header.jpg"
                     alt="Patinadora profesional realizando una pirueta"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -667,7 +667,7 @@ const App: React.FC = () => {
               <div className="bg-white rounded-3xl p-8 shadow-2xl">
                 <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl p-8 h-96 flex items-center justify-center overflow-hidden">
                   <img
-                    src="public/assets/image5.jpg"
+                    src="/assets/image5.jpg"
                     alt="Estudiantes entrenando en pista de patinaje"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -695,7 +695,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="public/assets/imagelist1.jpg"
+                  src="/assets/imagelist1.jpg"
                   alt="Macario Santelices Calle"
                   className="w-full h-full object-cover"
                 />
@@ -716,7 +716,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="public/assets/imagelist7.jpg"
+                  src="/assets/imagelist7.jpg"
                   alt="Miguel Angel Flores"
                   className="w-full h-full object-cover"
                 />
@@ -735,7 +735,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="public/assets/imagelist5.jpg"
+                  src="/assets/imagelist5.jpg"
                   alt="Belen Zambrana Pedraza"
                   className="w-full h-full object-cover"
                 />
@@ -756,7 +756,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="public/assets/imagelist6.jpg"
+                  src="/assets/imagelist6.jpg"
                   alt="Dorca Avigail Choque Cruz"
                   className="w-full h-full object-cover"
                 />
@@ -777,7 +777,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="public/assets/imagelist4.jpg"
+                  src="/assets/imagelist4.jpg"
                   alt="Oscar Alberto Grageda"
                   className="w-full h-full object-cover"
                 />
@@ -798,7 +798,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="public/assets/imagelist3.jpg"
+                  src="/assets/imagelist3.jpg"
                   alt="Fabián Andres Zegarra Almendras"
                   className="w-full h-full object-cover"
                 />
