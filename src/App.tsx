@@ -106,7 +106,7 @@ const App: React.FC = () => {
             <div className="flex items-center space-x-3">
               <div className="w-10 h-12 bg-white-500 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/assets/logoheader.png"
+                  src="/assets/eliteclublogo.jpg"
                   alt="Logo Club Patín Elite"
                   className="w-8 h-8 object-contain"
                 />
@@ -241,7 +241,8 @@ const App: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Trophy className="text-green-500" size={20} />
                   <span className="text-gray-700 font-medium">
-                    20+ Competencias Ganadas
+                    4 copas de 3er lugar de campeonatos nacionales,1 copa de
+                    Subcampeón nacional,1 copa de campeón departamental
                   </span>
                 </div>
               </div>
@@ -427,17 +428,19 @@ const App: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3">
+                  {/* <div className="flex items-center gap-3">
                     <Check className="text-green-500" size={16} />
                     <span className="text-gray-700">Rutinas artísticas</span>
+                  </div> */}
+                  <div className="flex items-center gap-3">
+                    <Check className="text-green-500" size={16} />
+                    <span className="text-gray-700">Técnica avanzada </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Check className="text-green-500" size={16} />
-                    <span className="text-gray-700">Primeras competencias</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Check className="text-green-500" size={16} />
-                    <span className="text-gray-700">Técnica avanzada</span>
+                    <span className="text-gray-700">
+                      Transición y dominio en pista reglamentaria
+                    </span>
                   </div>
                 </div>
               </div>
@@ -481,20 +484,18 @@ const App: React.FC = () => {
                     <div className="flex items-center gap-3">
                       <Check className="text-yellow-600" size={16} />
                       <span className="text-gray-700">
-                        Saltos dobles y triples
+                        Preparación técnica y táctica para competencias
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="text-yellow-600" size={16} />
                       <span className="text-gray-700">
-                        Rutinas competitivas
+                        Rutinas de rendimiento
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="text-yellow-600" size={16} />
-                      <span className="text-gray-700">
-                        Preparación psicológica
-                      </span>
+                      <span className="text-gray-700">Preparación fisica</span>
                     </div>
                   </div>
                 </div>
@@ -730,8 +731,8 @@ const App: React.FC = () => {
                 Director Académico - Preparador Técnico
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Campeón Nacional de patinaje, Campeón Panamericano de patinaje
-                de velocidad, miembro de la selección nacional de patinaje.
+                seleccionado a 7 campeonatos internacional y un mundial de
+                patinaje de velocidad premio a la victoria ALADA
               </p>
             </div>
 
@@ -759,7 +760,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="/assets/imagelist5.jpg"
+                  src="/assets/imagelist6.jpg"
                   alt="Belen Zambrana Pedraza"
                   className="w-full h-full object-cover"
                 />
@@ -780,7 +781,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="/assets/imagelist6.jpg"
+                  src="/assets/imagelist5.jpg"
                   alt="Dorca Avigail Choque Cruz"
                   className="w-full h-full object-cover"
                 />
@@ -957,14 +958,33 @@ const App: React.FC = () => {
                 <span>Facebook</span>
               </a>
               <a
-                href="https://www.tiktok.com/@makipatin.elite_club"
+                href="https://www.instagram.com/clubpatin_elite/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
               >
                 <Instagram size={24} />
-                <span>TikTok</span>
+                <span>Instagram</span>
               </a>
+              <a
+                href="https://www.tiktok.com/@makipatin.elite_club"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              >
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="text-white"
+              >
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+              </svg>
+                <span>Tiktok</span>
+              </a>
+              
             </div>
           </div>
 
@@ -972,7 +992,7 @@ const App: React.FC = () => {
             <p className="mb-2">
               © 2025 Club Elite. Todos los derechos reservados.
             </p>
-            <p>Desarrollando talentos en el patinaje artístico desde 2010</p>
+            <p>Desarrollando talento de patinaje en línea desde 2015</p>
           </div>
         </div>
       </footer>
