@@ -727,7 +727,7 @@ const App: React.FC = () => {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Macario Santelices Calle
+                Santelices Calle Macario
               </h3>
               <p className="text-green-600 font-medium mb-4">
                 Director Académico - Preparador Técnico
