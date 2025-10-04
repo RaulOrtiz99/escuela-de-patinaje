@@ -104,12 +104,14 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-12 bg-white-500 rounded-full flex items-center justify-center overflow-hidden">
-                <img
-                  src="/assets/eliteclublogo.jpg"
-                  alt="Logo Club Patín Elite"
-                  className="w-8 h-8 object-contain"
-                />
+              <div className="flex items-center space-x-3">
+                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center overflow-hidden p-1">
+                  <img
+                    src="/assets/elitepatinlogofinal.jpg"
+                    alt="Logo Club Patín Elite"
+                    className="w-full h-full object-contain rounded-md"
+                  />
+                </div>
               </div>
               <span className="text-xl font-bold text-gray-900">
                 Club Patín Elite
@@ -740,7 +742,7 @@ const App: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden">
                 <img
-                  src="/assets/imagelist7.jpg"
+                  src="/assets/miguel.png"
                   alt="Miguel Angel Flores"
                   className="w-full h-full object-cover"
                 />
@@ -750,9 +752,8 @@ const App: React.FC = () => {
               </h3>
               <p className="text-blue-600 font-medium mb-4">Entrenador</p>
               <p className="text-gray-600 leading-relaxed">
-                Instructor especializado en técnicas de patinaje con amplia
-                experiencia en el entrenamiento de estudiantes de todos los
-                niveles.
+                Profesor y entrenador nacional de patin carrera roller
+                principiante, intermedia y alto rendimiento,39 años en la disciplina (desde 1985)
               </p>
             </div>
 
@@ -973,18 +974,17 @@ const App: React.FC = () => {
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
               >
                 <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-white"
-              >
-                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-              </svg>
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="text-white"
+                >
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                </svg>
                 <span>Tiktok</span>
               </a>
-              
             </div>
           </div>
 
