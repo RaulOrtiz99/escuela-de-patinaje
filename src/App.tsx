@@ -32,8 +32,7 @@ const App: React.FC = () => {
 
   
   // Modo mantenimiento
-  const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE === 'true';
-
+const isMaintenanceMode = true;
   // Imágenes para el carrusel - usando rutas absolutas para mejor compatibilidad
   const carouselImages: CarouselImage[] = [
     {
@@ -97,52 +96,80 @@ const App: React.FC = () => {
     );
   };
 
-if (isMaintenanceMode) {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-center">
-        <div className="mb-6">
-          <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center overflow-hidden p-2 mx-auto mb-4 shadow-lg">
-            <img
-              src="/assets/elitepatinlogofinal.jpg"
-              alt="Logo Club Patín Elite"
-              className="w-full h-full object-contain"
-            />
+
+  
+// Si está en mantenimiento, mostrar esta pantalla
+  if (isMaintenanceMode) {
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+        <div className="max-w-md w-full text-center">
+          {/* Dinosaurio + Logo pequeño arriba */}
+          <div className="mb-8 relative">
+            <div className="inline-block relative">
+              {/* Dinosaurio de Chrome (SVG) con animación */}
+              <div className="w-32 h-32 mx-auto mb-4">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-full h-full drop-shadow-sm"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M65 35L60 40L55 35L50 40L45 35L40 40L35 35L30 40L25 35L20 40L15 35L10 40L5 35"
+                    stroke="#5f6368"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  <rect x="20" y="45" width="40" height="25" rx="2" fill="#5f6368" />
+                  <rect x="25" y="50" width="10" height="15" rx="1" fill="#f1f3f4" />
+                  <rect x="40" y="50" width="15" height="15" rx="1" fill="#f1f3f4" />
+                  <circle cx="30" cy="55" r="2" fill="#5f6368" />
+                  <circle cx="50" cy="55" r="2" fill="#5f6368" />
+                  <rect x="15" y="70" width="50" height="5" rx="2" fill="#5f6368" />
+                  <rect x="10" y="75" width="10" height="15" rx="2" fill="#5f6368" />
+                  <rect x="70" y="75" width="10" height="15" rx="2" fill="#5f6368" />
+                  <rect x="25" y="85" width="15" height="5" rx="1" fill="#5f6368" />
+                  <rect x="60" y="85" width="15" height="5" rx="1" fill="#5f6368" />
+                </svg>
+              </div>
+
+              {/* Logo pequeño del club arriba del dino */}
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white rounded-full shadow-md p-1 border border-gray-200">
+                <img
+                  src="/assets/elitepatinlogofinal.jpg"
+                  alt="Club Patín Elite"
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+            </div>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            Club Patín Elite
+
+          {/* Título y mensaje */}
+          <h1 className="text-3xl md:text-4xl font-medium text-gray-800 mb-3">
+            Sitio en Mantenimiento
           </h1>
-        </div>
-        
-        <div className="mb-8">
-          <div className="text-6xl mb-4">⏸️</div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Fuera de Servicio
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Servidor pausado automáticamente
+          <p className="text-lg text-gray-600 mb-2">
+            Estamos realizando mejoras técnicas
           </p>
-          <p className="text-gray-500 mb-8">
+          <p className="text-sm text-gray-500 mb-8">
             Volveremos pronto. ¡Gracias por tu paciencia!
           </p>
-        </div>
 
-        <div className="border-t pt-8">
-          <p className="text-gray-700 font-semibold mb-4">
-            ¿Necesitas contactarnos?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* Botón de WhatsApp */}
+          {/* Línea horizontal estilo Chrome */}
+          <div className="h-px bg-gray-300 w-full max-w-xs mx-auto mb-8"></div>
+
+          {/* Botones de contacto */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="https://wa.me/59167739022?text=Requiero%20más%20información%20sobre%20Club%20Elite"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all transform hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-md font-medium transition-all transform hover:scale-105 shadow-md"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -151,21 +178,36 @@ if (isMaintenanceMode) {
               WhatsApp
             </a>
 
-            {/* Botón de Llamar */}
             <a
               href="tel:+59167739022"
-              className="border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-500 py-3 px-6 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
+              className="inline-flex items-center justify-center gap-2 border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-500 py-3 px-6 rounded-md font-medium transition-all"
             >
-              📞 Llamar
+              <Phone size={18} />
+              Llamar
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-  
 
+          {/* Pie de página */}
+          <p className="text-xs text-gray-500 mt-10">
+            © {new Date().getFullYear()} Club Patín Elite. Todos los derechos reservados.
+          </p>
+        </div>
+
+        {/* Animación del dinosaurio con Tailwind (sin <style jsx>) */}
+        <style>
+          {`
+            @keyframes bounce-slow {
+              0%, 100% { transform: translateY(0); }
+              50% { transform: translateY(-12px); }
+            }
+            .animate-bounce-slow {
+              animation: bounce-slow 2s ease-in-out infinite;
+            }
+          `}
+        </style>
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
