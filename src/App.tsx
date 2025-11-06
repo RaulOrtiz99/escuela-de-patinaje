@@ -96,7 +96,7 @@ const App: React.FC = () => {
       (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
     );
   };
-  // Si está en modo mantenimiento, mostrar página personalizada
+ // Si está en modo mantenimiento, mostrar página personalizada
 if (isMaintenanceMode) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-4">
