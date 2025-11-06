@@ -96,118 +96,77 @@ const isMaintenanceMode = true;
     );
   };
 
-
-  
-// Si está en mantenimiento, mostrar esta pantalla
-  if (isMaintenanceMode) {
+if (isMaintenanceMode) {
     return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-        <div className="max-w-md w-full text-center">
-          {/* Dinosaurio + Logo pequeño arriba */}
-          <div className="mb-8 relative">
-            <div className="inline-block relative">
-              {/* Dinosaurio de Chrome (SVG) con animación */}
-              <div className="w-32 h-32 mx-auto mb-4">
-                <svg
-                  viewBox="0 0 100 100"
-                  className="w-full h-full drop-shadow-sm"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M65 35L60 40L55 35L50 40L45 35L40 40L35 35L30 40L25 35L20 40L15 35L10 40L5 35"
-                    stroke="#5f6368"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <rect x="20" y="45" width="40" height="25" rx="2" fill="#5f6368" />
-                  <rect x="25" y="50" width="10" height="15" rx="1" fill="#f1f3f4" />
-                  <rect x="40" y="50" width="15" height="15" rx="1" fill="#f1f3f4" />
-                  <circle cx="30" cy="55" r="2" fill="#5f6368" />
-                  <circle cx="50" cy="55" r="2" fill="#5f6368" />
-                  <rect x="15" y="70" width="50" height="5" rx="2" fill="#5f6368" />
-                  <rect x="10" y="75" width="10" height="15" rx="2" fill="#5f6368" />
-                  <rect x="70" y="75" width="10" height="15" rx="2" fill="#5f6368" />
-                  <rect x="25" y="85" width="15" height="5" rx="1" fill="#5f6368" />
-                  <rect x="60" y="85" width="15" height="5" rx="1" fill="#5f6368" />
-                </svg>
-              </div>
-
-              {/* Logo pequeño del club arriba del dino */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white rounded-full shadow-md p-1 border border-gray-200">
-                <img
-                  src="/assets/elitepatinlogofinal.jpg"
-                  alt="Club Patín Elite"
-                  className="w-full h-full object-contain rounded-full"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Título y mensaje */}
-          <h1 className="text-3xl md:text-4xl font-medium text-gray-800 mb-3">
-            Sitio en Mantenimiento
-          </h1>
-          <p className="text-lg text-gray-600 mb-2">
-            Estamos realizando mejoras técnicas
-          </p>
-          <p className="text-sm text-gray-500 mb-8">
-            Volveremos pronto. ¡Gracias por tu paciencia!
-          </p>
-
-          {/* Línea horizontal estilo Chrome */}
-          <div className="h-px bg-gray-300 w-full max-w-xs mx-auto mb-8"></div>
-
-          {/* Botones de contacto */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="https://wa.me/59167739022?text=Requiero%20más%20información%20sobre%20Club%20Elite"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-md font-medium transition-all transform hover:scale-105 shadow-md"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.864 3.488" />
-              </svg>
-              WhatsApp
-            </a>
-
-            <a
-              href="tel:+59167739022"
-              className="inline-flex items-center justify-center gap-2 border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-500 py-3 px-6 rounded-md font-medium transition-all"
-            >
-              <Phone size={18} />
-              Llamar
-            </a>
-          </div>
-
-          {/* Pie de página */}
-          <p className="text-xs text-gray-500 mt-10">
-            © {new Date().getFullYear()} Club Patín Elite. Todos los derechos reservados.
-          </p>
+      <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6 text-center">
+        {/* Imagen de error 500 */}
+        <div className="mb-8 max-w-sm md:max-w-md">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/007/872/980/non_2x/flat-illustration-500-internal-server-error-concept-can-t-connect-to-server-or-internet-website-error-500-can-be-used-for-web-landing-page-animation-promotion-etc-vector.jpg"
+            alt="500 Internal Server Error"
+            className="w-full h-auto rounded-xl shadow-lg animate-fade-in"
+          />
         </div>
 
-        {/* Animación del dinosaurio con Tailwind (sin <style jsx>) */}
+        {/* Mensaje en inglés */}
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+          The website is currently unavailable.
+        </h1>
+        <p className="text-lg text-gray-600 mb-8 max-w-lg">
+          We are performing maintenance. Please try again later.
+        </p>
+
+        {/* Botones de contacto */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/59167739022?text=I%20need%20more%20information%20about%20Club%20Elite"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.864 3.488" />
+            </svg>
+            Contact via WhatsApp
+          </a>
+
+          <a
+            href="tel:+59167739022"
+            className="inline-flex items-center justify-center gap-2 border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-500 py-3 px-6 rounded-lg font-semibold transition-all"
+          >
+            <Phone size={20} />
+            Call Us
+          </a>
+        </div>
+
+        {/* Pie de página */}
+        <p className="text-xs text-gray-500 mt-12">
+          © {new Date().getFullYear()} Club Patín Elite. All rights reserved.
+        </p>
+
+        {/* Animación suave de entrada */}
         <style>
           {`
-            @keyframes bounce-slow {
-              0%, 100% { transform: translateY(0); }
-              50% { transform: translateY(-12px); }
+            @keyframes fadeIn {
+              from { opacity: 0; transform: translateY(10px); }
+              to { opacity: 1; transform: translateY(0); }
             }
-            .animate-bounce-slow {
-              animation: bounce-slow 2s ease-in-out infinite;
+            .animate-fade-in {
+              animation: fadeIn 0.8s ease-out forwards;
             }
           `}
         </style>
       </div>
     );
   }
+  
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
