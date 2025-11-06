@@ -96,7 +96,8 @@ const App: React.FC = () => {
       (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
     );
   };
-  if (isMaintenanceMode) {
+
+if (isMaintenanceMode) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-center">
@@ -131,7 +132,8 @@ const App: React.FC = () => {
             ¿Necesitas contactarnos?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            
+            {/* Botón de WhatsApp */}
+            <a
               href="https://wa.me/59167739022?text=Requiero%20más%20información%20sobre%20Club%20Elite"
               target="_blank"
               rel="noopener noreferrer"
@@ -148,9 +150,11 @@ const App: React.FC = () => {
               </svg>
               WhatsApp
             </a>
-            
+
+            {/* Botón de Llamar */}
+            <a
               href="tel:+59167739022"
-              className="border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-500 py-3 px-6 rounded-lg font-semibold transition-all"
+              className="border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-500 py-3 px-6 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
             >
               📞 Llamar
             </a>
@@ -160,7 +164,7 @@ const App: React.FC = () => {
     </div>
   );
 }
-
+  
 
   return (
     <div className="min-h-screen bg-white">
